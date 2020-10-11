@@ -1,5 +1,31 @@
 $size-md: 840px;
 
+.app-message {
+  position: absolute;
+  z-index: 1001;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px;
+  background-color: #6bd400;
+  color: white;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all .32s ease-in-out;
+
+  &--error {
+    background-color: red;
+  }
+
+  &--visible {
+    top: 20px;
+  }
+}
+
 .checkout {
   background-color: transparent !important;
   margin: 0 auto;
@@ -91,9 +117,10 @@ $size-md: 840px;
 
   &__input-error {
     position: absolute;
-    top: 5px;
-    left: 0;
+    top: calc(100% + 3px);
+    left: 10px;
     color: red;
+    font-size: 12px;
   }
 
   &__visa-logo {
@@ -108,7 +135,7 @@ $size-md: 840px;
   }
 
   &__input-title {
-    margin: 0 0 0px 0;
+    margin: 0 0 2px 0;
     display: inline-block;
     font-weight: bold;
     font-size: 14px;
